@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>video.js with Size Toggle button</title>
+
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <link href="../dist/videojs-size-toggle.css" rel="stylesheet" />
+    <!-- for IE-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Object.assign,Object.entries,NodeList.prototype.forEach"></script>
+</head>
+<body>
+<h1>video.js Size Toggle Example</h1>
+<h4>The video has the option "position: fixed;".</h4>
+<video width="640" height="480" class="video-js vjs-default-skin vjs-big-play-centered" muted="muted" controls="controls">
+    <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>
+    <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm'>
+    <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg'>
+    <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+</video>
+
+<script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+<script src="../dist/videojs-size-toggle.js"></script>
+<script>
+    const video = document.querySelector('video');
+    const options = {
+        controlBar: {
+            'pictureInPictureToggle': false,
+            children: [
+                'playToggle',
+                'volumePanel',
+                'progressControl',
+                'sizeToggleButton',
+                'fullscreenToggle'
+            ]
+        },
+        sizeToggle: {
+            styles: {
+                position: 'fixed',
+                padding: '50px 50px 50px 0'
+            }
+        }
+    };
+
+    videojs(video, options);
+</script>
+</body>
+</html>

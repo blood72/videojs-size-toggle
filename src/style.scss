@@ -1,0 +1,52 @@
+$icon-font-family: VideoJS;
+
+// https://github.com/sass/sass/issues/659#issuecomment-64819075
+@function char($character-code) {
+  @if function-exists("selector-append") {
+    @return unquote("\"\\#{$character-code}\"");
+  }
+
+  @return str-slice("\x", 1, 1) + $character-code;
+}
+
+.vjs-size-toggle-control {
+  cursor: pointer;
+  flex: none;
+
+  &.vjs-size-toggle-hidden {
+    display: none;
+  }
+
+  & .vjs-icon-placeholder {
+    font-family: $icon-font-family;
+    font-weight: normal;
+    font-style: normal;
+
+    &:before {
+      content: char('f121'); // .vjs-icon-picture-in-picture-enter
+    }
+  }
+}
+
+.vjs-size-toggled .vjs-size-toggle-control .vjs-icon-placeholder {
+  font-family: $icon-font-family;
+  font-weight: normal;
+  font-style: normal;
+
+  &:before {
+    content: char('f122'); // .vjs-icon-picture-in-picture-exit
+  }
+}
+
+.vjs-fullscreen .vjs-size-toggle-control {
+  display: none !important;
+}
+
+.vjs-size-toggled {
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 72;
+}
