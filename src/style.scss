@@ -13,10 +13,6 @@ $icon-font-family: VideoJS;
   cursor: pointer;
   flex: none;
 
-  &.vjs-size-toggle-hidden {
-    display: none;
-  }
-
   & .vjs-icon-placeholder {
     font-family: $icon-font-family;
     font-weight: normal;

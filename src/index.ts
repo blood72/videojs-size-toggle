@@ -181,7 +181,7 @@ class SizeToggleButton extends videojs.getComponent('Button') {
    * @return {void}
    */
   hideButton(): void {
-    this.getControlEl()?.classList.add('vjs-size-toggle-hidden');
+    this.getControlEl()?.classList.add('vjs-hidden');
   }
 
   /**
@@ -190,7 +190,7 @@ class SizeToggleButton extends videojs.getComponent('Button') {
    * @return {void}
    */
   showButton(): void {
-    this.getControlEl()?.classList.remove('vjs-size-toggle-hidden');
+    this.getControlEl()?.classList.remove('vjs-hidden');
   }
 }
 
