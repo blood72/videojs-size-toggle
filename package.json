@@ -1,6 +1,6 @@
 {
   "name": "videojs-size-toggle",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This package adds a size toggle button to video.js",
   "author": "blood72 <blood72@kakao.com>",
   "license": "MIT",
