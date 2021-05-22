@@ -1,5 +1,7 @@
 # video.js Size Toggler
 
+![vjs-size-toggle](https://user-images.githubusercontent.com/24821306/119183211-bb09f580-baae-11eb-9cd7-d6040ff09e8d.gif)
+
 Personally used video.js size toggle on/off button package.
 
 This is an extension that controls the size of the video through the ON/OFF button.
@@ -18,7 +20,7 @@ This is an extension that controls the size of the video through the ON/OFF butt
 
 ## Requirement
 
-- video.js >= 7.0.0
+- [video.js](https://videojs.com/) >= 7.0.0
 
 ## Installation
 
@@ -44,7 +46,9 @@ const options = {
         'playToggle',
         'volumePanel',
         'progressControl',
+
         'sizeToggleButton',
+
         'fullscreenToggle',
     ],
   },
@@ -74,6 +78,9 @@ const options = {
     ],
   },
   sizeToggle: {
+    // activeOnly: false,
+    // disableStyles: false,
+    // minClientWidth: 300,
     styles: {
       position: 'fixed',
       padding: 'min(21.125rem, 24%) 0', // IE11 not work
@@ -86,9 +93,7 @@ videojs(video, options);
 
 ## Example
 
-![vjs-size-toggle](https://user-images.githubusercontent.com/24821306/119183211-bb09f580-baae-11eb-9cd7-d6040ff09e8d.gif)
-
-For more information, see some samples in the [example](/example) folder.
+You can see some samples in the [example](/example) folder.
 
 ## Browser Support
 
